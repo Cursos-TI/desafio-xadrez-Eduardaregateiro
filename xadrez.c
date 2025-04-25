@@ -5,17 +5,44 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
+    int i, escolhapeca;
+
+    printf(" * Jogo Xadrez * \n\n");
+    printf("1 - Bispo\n");
+    printf("2 - Torre\n");
+    printf("3 - Rainha\n");
+    printf("Escolha qual peça deseja movimentar: ");
+    scanf("%d", &escolhapeca);
+
     // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    if (escolhapeca == 1){  // Implementação de Movimentação do Bispo, mova o bispo 5 casas diagonal para direita
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+       i = 1;
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+        while (i <= 5)
+        {
+            printf("Cima, direita\n"); // imprimi a direção do movimento
+            i++;
+        }
+    }
+    else if (escolhapeca == 2) { // Implementação de Movimentação da Torre, mova a torre 5 casas para direita
+        for (i = 1; i <= 5; i++)
+        {
+            printf("Direita\n"); // imprimi a direção do movimento}
+        }
+    }
+    else if (escolhapeca == 3) { // Implementação de Movimentação da Rainha, mova a rainha 8 casas para esquerda
+        int i = 1;
+        do
+        {
+            printf("Esquerda\n"); // imprimi a direção do movimento
+            i++;
+        } while (i <= 8);
+    }
+    else
+    {
+        printf("Escolha inválida.\n");
+    }
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
