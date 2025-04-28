@@ -6,11 +6,13 @@
 
 int main() {
     int i, escolhapeca;
+    int movimentocavalo = 1;
 
     printf(" * Jogo Xadrez * \n\n");
     printf("1 - Bispo\n");
     printf("2 - Torre\n");
     printf("3 - Rainha\n");
+    printf("4 - Cavalo\n");
     printf("Escolha qual peça deseja movimentar: ");
     scanf("%d", &escolhapeca);
 
@@ -39,14 +41,24 @@ int main() {
             i++;
         } while (i <= 8);
     }
+    else if(escolhapeca == 4)
+
+     while (movimentocavalo--) // Nível Aventureiro - Movimentação do Cavalo, usando dois loops aninhados. 
+    {
+        printf("_________________________\n");
+        for(i = 0; i < 2; i++){
+            printf("Baixo\n"); //imprimir "Baixo" duas vezes 
+        }
+        printf("Esquerda\n"); // imprimir "Esquerda" uma vez
+    }
     else
     {
         printf("Escolha inválida.\n");
     }
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    
+    
+    
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
